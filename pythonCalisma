@@ -64,3 +64,12 @@ type(liste)
 liste_genis = ["a",19.3,90,notlar]
 
 len(liste_genis)
+
+type(liste_genis[0])
+type(liste_genis[1])
+type(liste_genis[2])
+type(liste_genis[3])  #liste içi tip sorgulama
+
+tum_liste = [liste,liste_genis]
+
+# del tum_liste
