@@ -1,0 +1,44 @@
+#SUBSTRINGS
+
+gel_yaz= "gelecegi_yazanlar"
+
+gel_yaz[0]
+gel_yaz[20]  #3. hatamız: "IndexError: string index out of range" 
+
+gel_yaz[0:3]  # 0'dan 3'e kadar
+
+
+
+#VARIABLES
+
+type(100)
+type(100.2)
+type(1+2j)
+
+
+#TYPE_DONUSTURME
+
+toplama_bir = input()  # input(): kullanıcıdan bilgi almak için 
+toplama_iki = input() 
+
+type(toplama_bir)
+
+toplama_bir + toplama_iki  #stringleri birleştirmek olarak algıladı
+
+int(toplama_bir) + int(toplama_iki)
+
+11.4
+int(11.4)
+
+12
+float(12)
+str(12)
+
+type(str(12))
+
+#print()
+
+print("gelecegi","yazanlar")
+print("gelecegi","yazanlar",sep="_")  #print fonksiyonunun genel amacını biçimlendirmek için kullandığımız ARGÜMAN.
+#fonksiyonların argümanlarına erişmek istediğimizde fonksiyonu yazıp prantezini açtığımızda göreceğiz ya da help kısmında da görebiliriz.
+#fonksiyon hakkında bilgi almak için de ?print gibi yazdığımızda göreceğiz.
