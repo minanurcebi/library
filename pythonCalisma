@@ -42,3 +42,25 @@ print("gelecegi","yazanlar")
 print("gelecegi","yazanlar",sep="_")  #print fonksiyonunun genel amacını biçimlendirmek için kullandığımız ARGÜMAN.
 #fonksiyonların argümanlarına erişmek istediğimizde fonksiyonu yazıp prantezini açtığımızda göreceğiz ya da help kısmında da görebiliriz.
 #fonksiyon hakkında bilgi almak için de ?print gibi yazdığımızda göreceğiz.
+
+
+
+#VERI_YAPILARI
+
+    #listeler
+    # degistirilebilirdir, kapsayicidir(farkli tipte verileri tutabilir), siralidir.
+    # iki sekilde liste olusturabiliyoruz:
+    # []
+    #list()
+
+notlar = [90,80,70,50]
+type(notlar)
+
+liste = ["a",19.3,90]
+type(liste)
+
+#liste bir üst tiptir. Bir veri yapısıdır. Bu veri yapısının içinde string tipte veya baska değerler de barındılabilir.
+
+liste_genis = ["a",19.3,90,notlar]
+
+len(liste_genis)
