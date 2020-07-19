@@ -1,4 +1,4 @@
-#SUBSTRINGS
+                               #SUBSTRINGS
 
 gel_yaz= "gelecegi_yazanlar"
 
@@ -9,14 +9,14 @@ gel_yaz[0:3]  # 0'dan 3'e kadar
 
 
 
-#VARIABLES
+                                #VARIABLES
 
 type(100)
 type(100.2)
 type(1+2j)
 
 
-#TYPE_DONUSTURME
+                              #TYPE_DONUSTURME
 
 toplama_bir = input()  # input(): kullanıcıdan bilgi almak için 
 toplama_iki = input() 
@@ -45,13 +45,16 @@ print("gelecegi","yazanlar",sep="_")  #print fonksiyonunun genel amacını biçi
 
 
 
-#VERI_YAPILARI
+                                 #VERI_YAPILARI (DATA_TYPES)
 
-    #listeler
-    # degistirilebilirdir, kapsayicidir(farkli tipte verileri tutabilir), siralidir.
-    # iki sekilde liste olusturabiliyoruz:
-    # []
-    #list()
+# =============================================================================
+#     #LİSTE
+#     
+#     # degistirilebilirdir, kapsayicidir(farkli tipte verileri tutabilir), siralidir.
+#     # iki sekilde liste olusturabiliyoruz:
+#     # []
+#     #list()
+# =============================================================================
 
 notlar = [90,80,70,50]
 type(notlar)
@@ -63,7 +66,7 @@ type(liste)
 
 liste_genis = ["a",19.3,90,notlar]
 
-len(liste_genis)
+len(liste_genis) 
 
 type(liste_genis[0])
 type(liste_genis[1])
@@ -73,3 +76,395 @@ type(liste_genis[3])  #liste içi tip sorgulama
 tum_liste = [liste,liste_genis]
 
 # del tum_liste
+
+
+                             #LİSTE ELEMAN İŞLEMLERİ
+
+liste=[10,20,30,40,50]
+
+
+liste[0]
+liste[1]
+liste[6]
+
+liste[0:2]
+liste[:2]
+liste[2:]
+
+yeni_liste= ["a",10,[20,30,40,50]]
+yeni_liste
+
+yeni_liste[2]
+yeni_liste[:2]
+
+yeni_liste[2][1]  #2. eleman olan listenin içindeki elemana erişmek için kullanılır.
+
+
+                             #LİSTE ELEMAN DEĞİŞTİRME
+
+liste=["ali","veli","berkcan","ayse"]
+liste
+
+liste[1]= "velinin babası"  # listedeki 1. eleman yerine .. yaz.
+liste
+
+liste=["ali","veli","berkcan","ayse"]
+liste[:3]= ["alinin_babasi","velinin_babasi","berkcanin_babasi"]  #birden fazla elemanı değiştirmek istersek.
+
+liste
+
+liste=["ali","veli","berkcan","ayse"]
+
+liste + ["kemal"]  # "kemal" listeye eklendi ancak atama işlemi yapmadığımız için kalıcı olarak atanmadı.
+liste
+
+liste= liste+ ["kemal"]  #atama işlemi yaptığımızdan dolayı "kemal" kalıcı olarak listeye eklendi.
+liste
+
+del liste[2]
+liste
+
+
+                                   #LİSTE METHODLARI
+
+liste= ["ali","veli","isik"]
+
+dir(liste)
+
+#append (ekleme)
+
+liste.append("berkcan")  #tekrar atama işlemi yapmadan listede kalıcı bie değişiklik meydana getirdik.
+
+#remove (silme)
+
+liste.remove("berkcan")
+
+liste= ["ali","veli","isik"]
+liste
+
+#insert (hangi indekse eleman eklemek istediğini)
+
+liste.insert(0,"ayse")
+liste
+
+liste= ["ali","veli","isik"]
+liste[0]= "ayse"  #burada sıfırıncı indeksi değiştirdik eklemedik.
+
+liste.insert(3,"berk") #sondan yeni bir eleman ekledim.
+liste
+
+len(liste)
+liste.insert(len(liste),"beren") #her zaman elimizle indeks sayısını sayamayacagımız için len fonksiyonunu kullanarak ekleme yapıyoruz.
+liste
+
+#pop (eleman silme)
+
+liste.pop(0)
+liste
+
+liste.pop(2)
+liste
+
+#count (sayma)
+
+liste=["ali","veli","isik","ali","veli"]
+liste
+
+liste.count("ali")
+liste.count("veli")
+liste.count("isik")
+
+#copy (ilk halini saklamak/yedeklemek)
+
+liste_yedek= liste.copy()
+
+#extend (iki listeyi birleştirmek için)
+
+liste.extend(["a","b",10])
+
+#index (bir elemanın hangi indekste olduğunu bulmak için)
+
+liste.index("ali")  #burada tekrarlanan elemanı anlamadım ?????????????
+
+#reverse (elemanları terse çevirmek)
+
+liste.reverse()
+liste
+
+#sort (sıralama)
+
+liste= [10,40,5,90]
+liste.sort()  #küçükten büyüğe sıraladı.
+liste
+
+liste.sort(reverse=True)  #küçükten büyüğe tersini aldı.
+liste
+
+liste.sort()
+liste
+
+
+#clear (listeyi temizleme)
+
+liste.clear()
+liste
+
+
+                          #DATA_TYPES //// TUPLE (DEMET)
+                          
+# =============================================================================
+# #kapsayıcıdırlar (birbirinden farklı veri tiplerini barındırırlar.)
+# #sıralıdır
+# # ***değiştirilemez*** (listeden en büyük farkı)
+# =============================================================================
+                          
+
+#Tuple oluşturma;
+                          
+t= ("ali","veli",1,2,3.2,[1,2,3,4])                          
+t= "ali","veli",1,2,3.2,[1,2,3,4]    #iki şekilde de oluşturabiliyoruz.
+
+tuple() #burada farklı seyler oluyor aQqq anlamadım.
+
+#tek elemanlı bir tuple olusturursak;
+t=("eleman")   # ******* t=("eleman" , )  virgül koymamız gerekiyor.
+type(t)  
+
+
+
+#tuple eleman işlemleri
+
+t= ("ali","veli",1,2,3,[1,2,3,4])
+
+t[1]
+t[:4]
+
+t[2]=99  #tuple değiştirilemez. typeError aldık.
+
+
+
+                         #DATA_TYPES /// DICTIONARY (sözlük)   key-value
+# =============================================================================
+# #kapsayıcıdırlar.
+# #*** sırasızdır ***     (listelerdeki gibi index işlemi yapılamaz)
+# #değiştirilebilir.
+# =============================================================================
+
+
+
+#sozluk oluşturma
+                         
+sozluk={"REG":"Regresyon Modeli",
+        "LOJ":"Lojistik Regresyon",
+        "CART":"Classification and Reg"}
+sozluk
+
+len(sozluk)
+
+sozluk={"REG":10,
+        "LOJ":20,
+        "CART":30}
+sozluk
+
+
+sozluk={"REG":["RMSE",10],
+        "LOJ":["MSE",20],
+        "CART":["SSE",30]}
+sozluk
+
+#Sozluk eleman işlemleri
+
+sozluk={"REG":"Regresyon Modeli",
+        "LOJ":"Lojistik Regresyon",
+        "CART":"Classification and Reg"}
+
+sozluk[0]   #keyerror hatası aldık. Sırasız olduğundan bir indexleme mantığı yoktur.
+
+sozluk["REG"]
+sozluk["LOJ"]
+
+sozluk={"REG":["RMSE",10],
+        "LOJ":["MSE",20],
+        "CART":["SSE",30]}
+
+sozluk["REG"]
+
+sozluk={"REG": {"RMSE":10,
+                "MSE" :20,
+                "SSE" :30} ,
+        
+        "LOJ":{"RMSE":10,
+                "MSE" :20,
+                "SSE" :30},
+        
+        "CART":{"RMSE":10,
+                "MSE" :20,
+                "SSE" :30}}
+sozluk
+
+sozluk["REG"]["SSE"]
+
+#Sozluk eleman ekleme/değiştirmek
+
+sozluk={"REG":"Regresyon Modeli",
+        "LOJ":"Lojistik Regresyon",
+        "CART":"Classification and Reg"}
+sozluk
+
+sozluk["GBM"] = "Gradient Boosting Mac"  #sona eklemiş olduk.
+sozluk 
+
+sozluk["REG"] = "Coklu Dogrusal Regresyon" #var olan elemanı değiştirdik.
+sozluk 
+
+sozluk[1] #keyerror verdi
+sozluk[1]= "Yapay Sinir Agları" #integer bir değeri eklemiş olduk.
+sozluk 
+
+l = [1]
+l
+
+sozluk[l]= "yeni bir sey"  #type hatası aldık. Sözlüklerde key değerleri ancak sabit veri yapılarıyla oluşturulabilir.
+
+t = ("ali","veli",1,2,3)
+
+sozluk[t]= "yeni bir sey"  #tuple değşmez olduğu için key değeri olarak atayabildim.
+sozluk 
+
+
+                        #DATA_TYPES /// SETLER(KÜMELER)
+# =============================================================================
+# #Sırasızdır. (indexsizdir.)
+# #Setler içerisindeki değerler eşsizdir. (Tekrar eden değerlerden oluşamaz)
+# #Değiştirilebilir.
+# #Farklı tipte değerler barındırabilir.
+# 
+# #Ne zaman lazım olur: Performans odaklı veri tipidir. Daha çok hız istediğimizde ve çoklama durumunun olmadığı (uniqe) veri yapı ihtiyacı olduğunda kullanılır
+# =============================================================================
+
+
+#Set Olusturma
+
+s = set()
+s 
+
+l= [1,"a","ali",123]
+s = set(l)
+s
+
+t= ("a","ali")
+s= set(t)
+s
+
+ali= "lutfen_ata_bakma_uzaya_git"
+type(ali)
+s= set(ali)  #Butun elemanları parçalayarak değerlendirdi ve her bir karakter sadece bir defa geçti.
+s
+
+l= ["ali","lutfen","ata","bakma","uzaya","git","git","ali","git"]
+l 
+s= set(l)
+s
+
+len(s)
+
+l[0]
+
+s[0] #typeerror aldık. Çünkü sıralı değildir.
+
+
+#Setlerde eleman ekleme/çıkarma
+
+l=["gelecegi","yazanlar"]
+s= set(l)
+s
+
+dir(s)
+
+s.add("ile")
+s
+
+s.add("gelecege_git")
+s
+
+s.add("ile")
+s
+
+s.remove("ile")  #Eğer içinde yoksa silme işlemini yapamadığı için keyError verir.
+s
+
+s.discard("ile")  #kod akışı içerisinde hata üretmeden silme işlemi yapar. Varsa siler, yoksa hata vermeden devam eder.
+
+
+#Setlerde Klasik Küme İşlemleri
+
+# =============================================================================
+# # difference() ile iki kümenin farkını ya da "-"ifadesini 
+# # intersection() iki küme kesişimi ya da "&" ifadesi 
+# # union() iki kümenin birleşimi
+# # symmetric_difference() ikisinde de olmayanları
+# =============================================================================
+
+#difference()
+
+set1= set([1,3,5])
+set2= set([1,2,3])
+
+set1.difference(set2) # 1'in 2'den farkı
+set2.difference(set1) # 2'nin 1'den farkı 
+set1.symmetric_difference(set2)  #ikisinde de ortak olmayan
+
+set1-set2  #1'in 2'den farkı
+set2-set1  #2'nin 1'den farkı 
+
+
+#intersection()
+
+set1= set([1,3,5])
+set2= set([1,2,3])
+
+set1.intersection(set2)
+set2.intersection(set1)  #ikisinin kesişimi 
+
+kesisim= set1&set2  #ikisinin kesişimi 
+kesisim 
+
+#union()
+
+birlesim= set1.union(set2) #ikisinin birleşimi
+birlesim 
+
+set1.intersection_update(set2) #set1'in set2 ile kesişimini bulup bunu set1'e atadı.
+set1 
+
+
+
+#Set Sorgu İşlemi
+
+set1= set([7,8,9,])
+set2= set([5,6,7,8,9,10])
+
+# İki kümenin kesişiminin boş olup olmadığı sorgusu
+set1.isdisjoint(set2) # iki kümenin kesişimi boş mu?
+
+
+# Bir kümenin bütün elemanlarının başka bir küme içinde yer alıp almadığı
+set1.issubset(set2) #set1 set2'nin alt kümesi midir?
+
+
+# Bir kümenin diğer kümeyi kapsayıp kapsamadığı
+set2.issuperset(set1) #set2 set1'i kapsıyor mu?
+
+
+# =============================================================================
+#  LİSTELER             TUPLE            SÖZLÜK            SETLER 
+
+# Değişebilir         Değişmez         Değişebilir       Değişebilir 
+# Sıralı              Sıralı           Sırasız           Sırasız + Eşsiz 
+# Kapsayıcı           Kapsayıcı        Kapsayıcı         Kapsayıcı 
+# =============================================================================
+
+
+
+
+             #FONKSIYONLARA GIRIS VE FONKSIYON OKURYAZARLIGI
