@@ -457,6 +457,8 @@ set2.issuperset(set1) #set2 set1'i kapsıyor mu?
 
 
 # =============================================================================
+#                             DATA_TYPES
+
 #  LİSTELER             TUPLE            SÖZLÜK            SETLER 
 
 # Değişebilir         Değişmez         Değişebilir       Değişebilir 
